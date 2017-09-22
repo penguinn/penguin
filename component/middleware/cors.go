@@ -11,7 +11,7 @@ func CORSMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		var origin string
 		origins := c.Request.Header["origin"]
-		if len(origins) != 0{
+		if len(origins) != 0 {
 			origin = origins[0]
 		}
 		if config.Get("server.mode") == "debug" {

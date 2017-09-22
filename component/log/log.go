@@ -36,7 +36,7 @@ func (LogComponent) Init(ops ...interface{}) (err error) {
 		logger log.LoggerInterface
 		isExit bool
 	)
-	if len(ops) == 0{
+	if len(ops) == 0 {
 		logger, err = log.LoggerFromConfigAsString(logFileString)
 	} else {
 		if utils.FileExist(ops[0].(*LogConfig).File) {

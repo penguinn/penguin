@@ -5,10 +5,10 @@ import (
 	"github.com/mitchellh/mapstructure"
 	"github.com/penguinn/penguin/component/config"
 	"github.com/penguinn/penguin/component/db"
+	"github.com/penguinn/penguin/component/log"
 	"github.com/penguinn/penguin/component/router"
 	"reflect"
 	"sync"
-	"github.com/penguinn/penguin/component/log"
 )
 
 const (
@@ -49,7 +49,7 @@ var (
 	useComps = map[string]Component{}
 
 	compConfigMapping = map[string]compSettingWrapper{
-		CompLogName: {CompLogConfigKey, log.LogConfig{}},
+		CompLogName:    {CompLogConfigKey, log.LogConfig{}},
 		CompRouterName: {CompServerConfigKey, router.RouterConfig{}},
 		CompDBName:     {CompDBConfigKey, db.DBConfig{}},
 	}
