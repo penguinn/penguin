@@ -88,10 +88,7 @@ func Read(name string) (*gorm.DB, error) {
 }
 
 func Write(name string) (*gorm.DB, error) {
-	fmt.Println(1)
-	fmt.Println(dbHolder)
 	if w, err := get(name); err == nil {
-		fmt.Println(2)
 		return w.Write(), nil
 	} else {
 		return nil, err

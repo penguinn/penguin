@@ -64,7 +64,6 @@ func Use(c Component, options ...interface{}) {
 	}
 
 	compKey := t.Name()
-	fmt.Println("comKey: ", compKey)
 
 	if CompUsed(compKey) {
 		panic(componentsCannotUseTwice)
