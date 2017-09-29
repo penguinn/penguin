@@ -9,6 +9,8 @@ import (
 	"github.com/penguinn/penguin/component/router"
 	"reflect"
 	"sync"
+	"github.com/penguinn/penguin/component/mongo"
+	"github.com/penguinn/penguin/component/redis"
 )
 
 const (
@@ -23,6 +25,7 @@ const (
 	CompRouterName = "RouterComponent"
 	CompDBName     = "DBComponent"
 	CompRedisName  = "RedisComponent"
+	CompMongoName  = "MongoComponent"
 )
 
 //这个key是作为配置文件的关键字
@@ -33,6 +36,7 @@ const (
 	CompJWTConfigKey    = "jwt"
 	CompLogConfigKey    = "log"
 	CompMQConfigKey     = "mq"
+	CompMongoConfigKey  = "mongo"
 )
 
 type Component interface {
@@ -52,6 +56,8 @@ var (
 		CompLogName:    {CompLogConfigKey, log.LogConfig{}},
 		CompRouterName: {CompServerConfigKey, router.RouterConfig{}},
 		CompDBName:     {CompDBConfigKey, db.DBConfig{}},
+		CompMongoName:  {CompMongoConfigKey, mongo.MongoConfig{}},
+		CompRedisName:  {CompRedisConfigKey, redis.ReidsConfig{}},
 	}
 )
 
