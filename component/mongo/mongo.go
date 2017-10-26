@@ -5,6 +5,7 @@ import (
 	"gopkg.in/mgo.v2"
 	"log"
 	"time"
+	"fmt"
 )
 
 var (
@@ -22,7 +23,9 @@ type MongoComponent struct{}
 
 func (MongoComponent) Init(ops ...interface{}) (err error) {
 	if len(ops) == 0 {
-		return errors.New("param error")
+		errStr := "param error"
+		log.Println("[mongo] error:", errStr)
+		return nil
 	}
 	cfg := ops[0].(*MongoConfig)
 
@@ -33,7 +36,7 @@ func (MongoComponent) Init(ops ...interface{}) (err error) {
 		Timeout:  2 * time.Second,
 	})
 	if err != nil {
-		log.Fatal("New mongo error:", err)
+		fmt.Println("[mongo] error:", err)
 		return
 	}
 	mongodb = session.DB(cfg.Database)

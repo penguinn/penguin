@@ -3,6 +3,7 @@ package redis
 import (
 	"github.com/go-redis/redis"
 	"errors"
+	"gitlab.dev.okapp.cc/medlinker/med-his-wechat/components/log"
 )
 
 var (
@@ -18,7 +19,9 @@ type RedisComponent struct {}
 
 func (RedisComponent) Init(ops ...interface{}) (err error) {
 	if len(ops) == 0 {
-		return errors.New("param error")
+		errStr := "param error"
+		log.Println("[redis error]:", errStr)
+		return nil
 	}
 	cfg := ops[0].(*ReidsConfig)
 	client := redis.NewClient(&redis.Options{
