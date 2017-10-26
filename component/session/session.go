@@ -143,7 +143,7 @@ func (d *dbStore) BatchUpdateByUser(userID int, not string, data string) error {
 
 type StoreData struct {
 	Token      string `gorm:"column:token;type:varchar(36);primary_key;not null;default:''"`
-	Data       string `gorm:"column:data;type:text;not null;default:''"`
+	Data       string `gorm:"column:data;type:text;not null"`
 	UserID     int    `gorm:"column:user_id;type:int(10);unsigned;not null;default:0"`
 	CreateTime int64  `gorm:"column:create_time;type:int(10);unsigned;not null;default:0"`
 	UpdateTime int64  `gorm:"column:update_time;type:int(10);unsigned;not null;default:0"`
