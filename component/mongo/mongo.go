@@ -36,7 +36,7 @@ func (MongoComponent) Init(ops ...interface{}) (err error) {
 	})
 	if err != nil {
 		fmt.Println("[mongo] error:", err)
-		return
+		return nil
 	}
 	mongodb = session.DB(cfg.Database)
 	return nil
