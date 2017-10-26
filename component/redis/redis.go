@@ -2,7 +2,7 @@ package redis
 
 import (
 	"github.com/go-redis/redis"
-	"gitlab.dev.okapp.cc/medlinker/med-his-wechat/components/log"
+	"log"
 )
 
 var (
