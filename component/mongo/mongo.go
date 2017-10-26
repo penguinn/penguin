@@ -1,7 +1,6 @@
 package mongo
 
 import (
-	"errors"
 	"gopkg.in/mgo.v2"
 	"log"
 	"time"

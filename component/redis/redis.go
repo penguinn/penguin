@@ -2,7 +2,6 @@ package redis
 
 import (
 	"github.com/go-redis/redis"
-	"errors"
 	"gitlab.dev.okapp.cc/medlinker/med-his-wechat/components/log"
 )
 
