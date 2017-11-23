@@ -344,10 +344,10 @@ func Middleware(context *gin.Context) {
 
 		d, ok := store.Get(cookie.Value)
 		s.token = cookie.Value
+		s.isNew = false
 		if ok {
 			s.created = d.CreateTime
 			s.setOptions(MaxAgeOption(d.ExpireAt - d.CreateTime))
-			s.isNew = false
 			if err := codec.Decode([]byte(d.Data), &s.values); err != nil {
 				fmt.Println(err)
 				context.AbortWithStatus(500)
