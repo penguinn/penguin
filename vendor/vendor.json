@@ -105,10 +105,10 @@
 			"revisionTime": "2017-07-28T00:50:58Z"
 		},
 		{
-			"checksumSHA1": "/ncXsr1OpnZ0iCT/Bo+XnVI+nwk=",
+			"checksumSHA1": "HxAVVeX9gPV15TVb4N0E+Iu01vM=",
 			"path": "github.com/go-redis/redis",
-			"revision": "b52814fa179a2f8e7f13d497c6ab40aba58ad773",
-			"revisionTime": "2017-06-29T14:10:50Z"
+			"revision": "ce05aa5775d74a7314b83570c15cd8cc66ed1696",
+			"revisionTime": "2018-01-04T12:45:42Z"
 		},
 		{
 			"checksumSHA1": "4nvc3mJXcLJxCWKHhVLvAAstQVI=",
