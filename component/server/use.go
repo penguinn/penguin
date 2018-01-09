@@ -6,11 +6,11 @@ import (
 	"github.com/penguinn/penguin/component/config"
 	"github.com/penguinn/penguin/component/db"
 	"github.com/penguinn/penguin/component/log"
+	"github.com/penguinn/penguin/component/mongo"
+	"github.com/penguinn/penguin/component/redis"
 	"github.com/penguinn/penguin/component/router"
 	"reflect"
 	"sync"
-	"github.com/penguinn/penguin/component/mongo"
-	"github.com/penguinn/penguin/component/redis"
 )
 
 const (
